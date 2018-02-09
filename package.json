@@ -1,0 +1,26 @@
+{
+  "name": "maven-semantic-release",
+  "version": "1.0.0",
+  "description": "Automated release management for maven projects",
+  "bin": {
+    "maven-semantic-release": "bin/release-cli.js"
+  },
+  "author": "evansiroky <evan.siroky@yahoo.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "debug": "^3.1.0",
+    "env-ci": "^1.2.0",
+    "execa": "^0.9.0",
+    "fs-extra": "^5.0.0",
+    "got": "^8.0.1",
+    "semantic-release": "^12.4.1",
+    "xml2js-es6-promise": "^1.1.1"
+  },
+  "devDependencies": {
+    "mastarm": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mastarm lint bin lib"
+  }
+}
