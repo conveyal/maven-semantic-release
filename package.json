@@ -1,6 +1,6 @@
 {
-  "name": "maven-semantic-release",
-  "version": "1.0.0",
+  "name": "@conveyal/maven-semantic-release",
+  "version": "0.0.0-development",
   "description": "Automated release management for maven projects",
   "bin": {
     "maven-semantic-release": "bin/release-cli.js"
@@ -18,9 +18,17 @@
     "xml2js-es6-promise": "^1.1.1"
   },
   "devDependencies": {
-    "mastarm": "^4.1.0"
+    "mastarm": "^4.1.0",
+    "semantic-release": "^12.4.1",
+    "travis-deploy-once": "^4.3.4"
   },
   "scripts": {
-    "test": "mastarm lint bin lib"
+    "test": "mastarm lint bin lib",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conveyal/maven-semantic-release.git"
   }
 }
