@@ -14,18 +14,16 @@
     "execa": "^0.9.0",
     "fs-extra": "^5.0.0",
     "got": "^8.0.1",
-    "semantic-release": "^12.4.1",
+    "semantic-release": "11.2.0",
     "xml2js-es6-promise": "^1.1.1"
   },
   "devDependencies": {
     "mastarm": "^4.1.0",
-    "semantic-release": "^12.4.1",
     "travis-deploy-once": "^4.3.4"
   },
   "scripts": {
     "test": "mastarm lint bin lib",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
