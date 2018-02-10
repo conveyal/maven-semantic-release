@@ -1,4 +1,5 @@
 .gitignore
 .travis.yml
+github-token-example.png
 node_modules
 yarn.lock

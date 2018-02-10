@@ -18,6 +18,8 @@ Follow [this guide](http://central.sonatype.org/pages/ossrh-guide.html#initial-s
 
 ### Step 2:  Make sure your pom.xml file is ready to be released
 
+<span style="font-size:larger;">[See this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).</span>
+
 Your maven project needs to have at least the following items in your pom.xml:
 
 - `name` - the name of the project
@@ -28,15 +30,25 @@ Your maven project needs to have at least the following items in your pom.xml:
 - `developers` - who worked on the project
 - `distributionManagement` - the places where you want to distribute your project to
 
-You need to have the following maven plugins included in your pom.xml as well:
+#### Plugins
+
+Your pom.xml file needs to have the following maven plugins included:
 
 - `maven-gpg-plugin`
 - `maven-javadoc-plugin`
 - `maven-source-plugin`
 
+Your pom.xml file also needs the following sonatype plugin to automatically close and release your project from nexus.
+
+- `nexus-staging-maven-plugin`
+
 Also, in order to work with this project, your pom.xml file must include a comment next to the version entry.  This is so that this tool can make appropriate changes.
 
-See [this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).
+```
+<version>2.0.1-SNAPSHOT</version> <!-- semantic-release-version-line -->
+```
+
+<span style="font-size:larger;">[See this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).</span>
 
 ### Step 3: Create a maven-settings.xml file
 
@@ -84,3 +96,9 @@ cache:
     - $HOME/.m2/repository
     - $HOME/.yarn-cache
 ```
+
+### Step 6:  Add a github token to Travis
+
+Create a Github token that will be used to make commits and create releases.  Add the token to your travis environment variables as either `GH_TOKEN` or `GITHUB_TOKEN`.  Add the following permissions to your token:
+
+![Github token permissions](github-token-example.png)
