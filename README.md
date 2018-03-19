@@ -42,14 +42,6 @@ Your pom.xml file also needs the following sonatype plugin to automatically clos
 
 - `nexus-staging-maven-plugin`
 
-Also, in order to work with this project, your pom.xml file must include a comment next to the version entry.  This is so that this tool can make appropriate changes.
-
-```
-<version>2.0.1-SNAPSHOT</version> <!-- semantic-release-version-line -->
-```
-
-<span style="font-size:larger;">[See this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).</span>
-
 ### Step 3: Create a maven-settings.xml file
 
 You can copy paste [this file](https://github.com/evansiroky/maven-semantic-release-example/blob/master/maven-settings.xml) into your repository.  The file must be called `maven-settings.xml` and must exist in the root directory of your project.
