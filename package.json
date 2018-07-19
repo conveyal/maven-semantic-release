@@ -9,17 +9,15 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "debug": "^3.1.0",
-    "env-ci": "^1.2.0",
     "execa": "^0.9.0",
     "fs-extra": "^5.0.0",
     "got": "^8.0.1",
-    "semantic-release": "11.2.0",
+    "semantic-release": "^15.8.1",
+    "semver": "^5.5.0",
     "xml2js-es6-promise": "^1.1.1"
   },
   "devDependencies": {
-    "mastarm": "^4.1.0",
-    "travis-deploy-once": "^4.3.4"
+    "mastarm": "^4.1.0"
   },
   "scripts": {
     "test": "mastarm lint bin lib",
