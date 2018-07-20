@@ -4,7 +4,7 @@ Automated release management for maven projects
 
 ## About
 
-maven-semantic-release is built on top of [semantic-release](https://github.com/semantic-release/semantic-release) v11.  The difference is that this project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
+maven-semantic-release is built on top of [semantic-release](https://github.com/semantic-release/semantic-release) v15.  The difference is that this project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
 
 The workflow this assumes is that your project will use [Angular-style commit messages](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) (theoretically you could override this and use a different style) and only merge to master when you want to create a new release.  When a new release is generated, it will automatically be deployed to maven central and this tool will create and push 2 commits to your github repository.  The first commit will change your pom.xml file to the next version and the second one will update the pom.xml file again to the next snapshot.
 
