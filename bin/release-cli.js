@@ -7,6 +7,8 @@ const semanticRelease = require('semantic-release/cli')
  */
 async function run () {
   process.argv.push(...[
+    '--prepare',
+    'false',
     '--publish',
     '@conveyal/maven-semantic-release/lib/publish',
     '--verify-conditions',
