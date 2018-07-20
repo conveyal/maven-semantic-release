@@ -95,4 +95,4 @@ cache:
 
 Create a Github token that will be used to make commits and create releases.  Add the token to your travis environment variables as either `GH_TOKEN` or `GITHUB_TOKEN`.  Add the following permissions to your token:
 
-![Github token permissions](github-token-example.png)
+<img src="github-token-example.png" />
