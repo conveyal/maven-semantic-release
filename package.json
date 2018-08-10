@@ -2,9 +2,7 @@
   "name": "@conveyal/maven-semantic-release",
   "version": "0.0.0-development",
   "description": "Automated release management for maven projects",
-  "bin": {
-    "maven-semantic-release": "bin/release-cli.js"
-  },
+  "main": "index.js",
   "author": "evansiroky <evan.siroky@yahoo.com>",
   "license": "MIT",
   "private": false,
@@ -22,7 +20,7 @@
     "mastarm": "^4.1.0"
   },
   "scripts": {
-    "test": "mastarm lint bin lib",
+    "test": "mastarm lint lib",
     "semantic-release": "semantic-release"
   },
   "repository": {
