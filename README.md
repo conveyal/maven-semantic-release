@@ -64,7 +64,7 @@ After the success of your CI Run, you'll want to run semantic-release with the m
 
 ```
 after_success:
-  - yarn global add @conveyal/maven-semantic-release semantic-release && semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github --verify-release @conveyal/maven-semantic-release
+  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github --verify-release @conveyal/maven-semantic-release
 ```
 
 #### before_install
@@ -87,8 +87,15 @@ This should help speed up the installation of maven-semantic-release.  You'll wa
 ```
 cache:
   directories:
-    - $HOME/.m2/repository
+    - $HOME/.m2
     - $HOME/.yarn-cache
+```
+
+Also, you'll want to install maven-semantic-release and semantic-release in a step before the build because travis caches immediately after the build.
+
+```
+before_script:
+  - yarn global add @conveyal/maven-semantic-release semantic-release
 ```
 
 ### Step 6:  Add a github token to Travis
