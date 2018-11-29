@@ -27,6 +27,6 @@
     "mastarm": "^4.1.0"
   },
   "peerDependencies": {
-    "semantic-release": "^15.12.2"
+    "semantic-release": "^15.12.3"
   }
 }
