@@ -24,7 +24,8 @@
     "xml2js-es6-promise": "^1.1.1"
   },
   "devDependencies": {
-    "mastarm": "^4.1.0"
+    "mastarm": "^4.1.0",
+    "semantic-release": "^15.12.3"
   },
   "peerDependencies": {
     "semantic-release": "^15.12.3"
