@@ -6,7 +6,9 @@ Automated release management for maven projects
 
 maven-semantic-release is a plugin for [semantic-release](https://github.com/semantic-release/semantic-release) v15.  This project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
 
-The workflow this assumes is that your project will use [Angular-style commit messages](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) (theoretically you could override this and use a different style) and only merge to master when you want to create a new release.  When a new release is generated, it will automatically be deployed to maven central and this tool will create and push 2 commits to your github repository.  The first commit will change your pom.xml file to the next version and the second one will update the pom.xml file again to the next snapshot.
+The workflow this assumes is that your project will use [Angular-style commit messages](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) (theoretically you could override this and use a different style) and only merge to master when you want to create a new release.  When a new release is generated, it will automatically be deployed to maven central.
+
+Optionally, you can also use this enable this tool to create and push some commits and then merge those back into the development branch of your git repository.
 
 ## Setup
 
@@ -60,11 +62,18 @@ See this [example file](https://github.com/evansiroky/maven-semantic-release-exa
 
 #### after_success
 
-After the success of your CI Run, you'll want to run semantic-release with the maven-semantic-release plugins.  Include the following in this exact order:
+After the success of your CI Run, you'll want to run semantic-release with the maven-semantic-release plugins.  At a minimum, you must include the following recommended configuration.  This includes overriding the plugins so that the default npm plugin is not used.
 
 ```
 after_success:
   - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github --verify-release @conveyal/maven-semantic-release
+```
+
+If you want to enable the Conveyal workflow of making commits of the release version, snapshot version and then merging master into dev, use this configuration:
+
+```
+after_success:
+  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev
 ```
 
 #### before_install

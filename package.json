@@ -6,19 +6,6 @@
   "author": "evansiroky <evan.siroky@yahoo.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "@semantic-release/error": "^2.2.0",
-    "aggregate-error": "^1.0.0",
-    "execa": "^0.10.0",
-    "fs-extra": "^5.0.0",
-    "got": "^8.0.1",
-    "semantic-release": "^15.8.1",
-    "semver": "^5.5.0",
-    "xml2js-es6-promise": "^1.1.1"
-  },
-  "devDependencies": {
-    "mastarm": "^4.1.0"
-  },
   "scripts": {
     "test": "mastarm lint lib",
     "semantic-release": "semantic-release"
@@ -26,5 +13,21 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/conveyal/maven-semantic-release.git"
+  },
+  "dependencies": {
+    "@semantic-release/error": "^2.2.0",
+    "aggregate-error": "^1.0.0",
+    "execa": "^0.10.0",
+    "fs-extra": "^5.0.0",
+    "got": "^8.0.1",
+    "semver": "^5.5.0",
+    "xml2js-es6-promise": "^1.1.1"
+  },
+  "devDependencies": {
+    "mastarm": "^4.1.0",
+    "semantic-release": "^15.12.3"
+  },
+  "peerDependencies": {
+    "semantic-release": "^15.12.3"
   }
 }
