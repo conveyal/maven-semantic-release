@@ -14,6 +14,8 @@ Optionally, you can also use this enable this tool to create and push some commi
 
 This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](http://www.debonair.io/post/maven-cd/).
 
+If your project merely wants to take advantage of committing version numbers and creating nice release notes on your github project, you can skip steps 1-4.  In step 5, the creation of the maven artifact signing key can be skipped and the `skip-maven-deploy` flag must be set.
+
 ### Step 1: Setup an account with OSSRH
 
 Follow [this guide](http://central.sonatype.org/pages/ossrh-guide.html#initial-setup).
@@ -74,6 +76,13 @@ If you want to enable the Conveyal workflow of making commits of the release ver
 ```
 after_success:
   - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev
+```
+
+It is also possible to skip deploying to maven central, but still incrementing the version in pom.xml by setting the flag `skip-maven-deploy`.  For example:
+
+```
+after_success:
+  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev --skip-maven-deploy
 ```
 
 #### before_install
