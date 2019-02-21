@@ -113,7 +113,7 @@ Also, you'll want to install maven-semantic-release and semantic-release in a st
 
 ```
 before_script:
-  - yarn global add @conveyal/maven-semantic-release semantic-release
+  - yarn global add @conveyal/maven-semantic-release semantic-release@15
 ```
 
 ### Step 6:  Add a github token to Travis
