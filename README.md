@@ -124,4 +124,4 @@ Create a Github token that will be used to make commits and create releases.  Ad
 
 ## Which `mvn` will be used
 
-This plugin uses `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use it instead.
+This plugin uses the `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use that instead.
