@@ -121,3 +121,7 @@ before_script:
 Create a Github token that will be used to make commits and create releases.  Add the token to your travis environment variables as either `GH_TOKEN` or `GITHUB_TOKEN`.  Add the following permissions to your token:
 
 <img src="https://raw.githubusercontent.com/conveyal/maven-semantic-release/master/github-token-example.png" />
+
+## Which `mvn` will be used
+
+This plugin uses `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use it instead.
