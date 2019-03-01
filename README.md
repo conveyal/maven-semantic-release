@@ -113,7 +113,7 @@ Also, you'll want to install maven-semantic-release and semantic-release in a st
 
 ```
 before_script:
-  - yarn global add @conveyal/maven-semantic-release semantic-release
+  - yarn global add @conveyal/maven-semantic-release semantic-release@15
 ```
 
 ### Step 6:  Add a github token to Travis
@@ -121,3 +121,7 @@ before_script:
 Create a Github token that will be used to make commits and create releases.  Add the token to your travis environment variables as either `GH_TOKEN` or `GITHUB_TOKEN`.  Add the following permissions to your token:
 
 <img src="https://raw.githubusercontent.com/conveyal/maven-semantic-release/master/github-token-example.png" />
+
+## Which `mvn` will be used
+
+This plugin uses the `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use that instead.
