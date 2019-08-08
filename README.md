@@ -85,6 +85,13 @@ after_success:
   - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev --skip-maven-deploy
 ```
 
+By default the commit message contains the appendix '[ci skip]' that skips the pipeline to run when the pom.xml is pushed. This can be disabled for snapshot and final versions if needed by providing the flag `disable-snapshot-skip-ci` or  `disable-final-skip-ci`. For example:
+
+```
+after_success:
+  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev --disable-snapshot-skip-ci --disable-final-skip-ci
+```
+
 #### before_install
 
 Be sure to include the import of your signing keys.  If you followed everything correctly in step 4 you should have something like the following added to your .travis.yml file:
