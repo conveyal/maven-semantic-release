@@ -54,7 +54,7 @@ You can copy paste [this file](https://github.com/evansiroky/maven-semantic-rele
 
 ### Step 4: Create gpg keys to sign your artifact
 
-Follow the all steps from `Create code signing cert` to `Encrypt cert and variables for travis` in [this guide](http://www.debonair.io/post/maven-cd/#create-code-signing-cert:a547b4a31e9ae1ba41fe3873843c9208).  When adding keys to Travis you could also add them using the Travis-CI website in the settings of your repository instead of adding secure variables to your .travis.yml file.  
+Follow the all steps from `Create code signing cert` to `Encrypt cert and variables for travis` in [this guide](https://web.archive.org/web/20190927112225/http://www.debonair.io/post/maven-cd/#create-code-signing-cert:a547b4a31e9ae1ba41fe3873843c9208).  When adding keys to Travis you could also add them using the Travis-CI website in the settings of your repository instead of adding secure variables to your .travis.yml file.  
 
 We wish you good luck as this step is really easy to mess up and get exactly right.  Adding your password to travis can be infuriating as you may need to escape parts of it if it has a space, @ symbol or something else.
 
