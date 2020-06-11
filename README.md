@@ -12,7 +12,7 @@ Optionally, you can also use this enable this tool to create and push some commi
 
 ## Setup
 
-This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](http://www.debonair.io/post/maven-cd/).
+This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](https://web.archive.org/web/20190927112225/http://www.debonair.io/post/maven-cd/).
 
 If your project merely wants to take advantage of committing version numbers and creating nice release notes on your github project, you can skip steps 1-4.  In step 5, the creation of the maven artifact signing key can be skipped and the `skip-maven-deploy` flag must be set.
 
