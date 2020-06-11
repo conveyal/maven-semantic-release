@@ -12,7 +12,7 @@ Optionally, you can also use this enable this tool to create and push some commi
 
 ## Setup
 
-This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](http://www.debonair.io/post/maven-cd/).
+This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](https://web.archive.org/web/20190927112225/http://www.debonair.io/post/maven-cd/).
 
 If your project merely wants to take advantage of committing version numbers and creating nice release notes on your github project, you can skip steps 1-4.  In step 5, the creation of the maven artifact signing key can be skipped and the `skip-maven-deploy` flag must be set.
 
@@ -54,7 +54,7 @@ You can copy paste [this file](https://github.com/evansiroky/maven-semantic-rele
 
 ### Step 4: Create gpg keys to sign your artifact
 
-Follow the all steps from `Create code signing cert` to `Encrypt cert and variables for travis` in [this guide](http://www.debonair.io/post/maven-cd/#create-code-signing-cert:a547b4a31e9ae1ba41fe3873843c9208).  When adding keys to Travis you could also add them using the Travis-CI website in the settings of your repository instead of adding secure variables to your .travis.yml file.  
+Follow the all steps from `Create code signing cert` to `Encrypt cert and variables for travis` in [this guide](https://web.archive.org/web/20190927112225/http://www.debonair.io/post/maven-cd/#create-code-signing-cert:a547b4a31e9ae1ba41fe3873843c9208).  When adding keys to Travis you could also add them using the Travis-CI website in the settings of your repository instead of adding secure variables to your .travis.yml file.  
 
 We wish you good luck as this step is really easy to mess up and get exactly right.  Adding your password to travis can be infuriating as you may need to escape parts of it if it has a space, @ symbol or something else.
 
