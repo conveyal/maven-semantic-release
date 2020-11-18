@@ -25,9 +25,9 @@
   },
   "devDependencies": {
     "mastarm": "^5.1.3",
-    "semantic-release": "^15.12.3"
+    "semantic-release": "^17.2.3"
   },
   "peerDependencies": {
-    "semantic-release": "^15.12.3"
+    "semantic-release": "^17.2.3"
   }
 }
