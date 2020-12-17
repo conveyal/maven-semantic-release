@@ -4,7 +4,7 @@ Automated release management for maven projects
 
 ## About
 
-maven-semantic-release is a plugin for [semantic-release](https://github.com/semantic-release/semantic-release) v15.  This project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
+maven-semantic-release is a plugin for [semantic-release](https://github.com/semantic-release/semantic-release).  This project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
 
 The workflow this assumes is that your project will use [Angular-style commit messages](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) (theoretically you could override this and use a different style) and only merge to master when you want to create a new release.  When a new release is generated, it will automatically be deployed to maven central.
 
@@ -126,7 +126,7 @@ Also, you'll want to install maven-semantic-release and semantic-release in a st
 
 ```
 before_script:
-  - yarn global add @conveyal/maven-semantic-release semantic-release@15
+  - yarn global add @conveyal/maven-semantic-release semantic-release
 ```
 
 ### Step 6:  Add a github token to Travis
@@ -138,5 +138,3 @@ Create a Github token that will be used to make commits and create releases.  Ad
 ## Which `mvn` will be used
 
 This plugin uses the `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use that instead.
-
-
