@@ -1,0 +1,25 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Install npm packages using cache
+        uses: bahmutov/npm-install@v1
+      - name: Run tests
+        run: yarn test
+      - name: Semantic release
+        run: yarn semantic-release
