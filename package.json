@@ -19,7 +19,7 @@
     "aggregate-error": "^1.0.0",
     "execa": "^0.10.0",
     "fs-extra": "^5.0.0",
-    "got": "^8.0.1",
+    "got": "^11.8.5",
     "semver": "^5.5.0",
     "xml2js-es6-promise": "^1.1.1"
   },
